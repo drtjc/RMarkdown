@@ -1,13 +1,17 @@
 ---
 title: "R Notebooks"
-output: 
-  html_notebook: 
+output:
+  html_notebook:
     number_sections: yes
     theme: sandstone
     toc: yes
-editor_options: 
+editor_options:
   chunk_output_type: inline
 ---
+
+```{r global_options, include=FALSE}
+# knitr::opts_chunk$set(tidy=TRUE, results='hold', fig.align='center')
+```
 
 # How it works
 A notebook is an interactive R Markdown file. The file contains three types of contents:
@@ -20,8 +24,11 @@ A notebook is an interactive R Markdown file. The file contains three types of c
 You can insert code chunks into your file with;
 
 * The keyboard shortcut **Ctrl + Alt + I**
-* The Add Chunk command in the editor toolbar
+* The Add Chunk ![](Images/notebook-insert-chunk.png) command in the editor toolbar
 * The chunk delimiters ` ```{r} ` and ` ``` `
+
+## Chunk options
+Chunk output can be customized with knitr options, arguments set in the `{}` of a chunk header.
 
 
 
@@ -30,3 +37,20 @@ x <- 1
 x
 ```
 
+```{r, echo=FALSE}
+x <- 2
+x
+```
+```{r, collapse=TRUE}
+x <- 3
+x
+y<-4
+y
+```
+
+```{r, collapse=FALSE, results='hold'}
+x <- 5
+x
+y<- 6
+y
+```

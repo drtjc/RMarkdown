@@ -174,10 +174,14 @@ $(document).ready(function () {
 <div id="TOC">
 <ul>
 <li><a href="#how-it-works"><span class="toc-section-number">1</span> How it works</a></li>
-<li><a href="#code-chunks"><span class="toc-section-number">2</span> Code chunks</a></li>
+<li><a href="#code-chunks"><span class="toc-section-number">2</span> Code chunks</a><ul>
+<li><a href="#chunk-options"><span class="toc-section-number">2.1</span> Chunk options</a></li>
+</ul></li>
 </ul>
 </div>
 
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 <!-- rnb-text-begin -->
 <div id="how-it-works" class="section level1">
 <h1><span class="header-section-number">1</span> How it works</h1>
@@ -193,9 +197,12 @@ $(document).ready(function () {
 <p>You can insert code chunks into your file with;</p>
 <ul>
 <li>The keyboard shortcut <strong>Ctrl + Alt + I</strong></li>
-<li>The Add Chunk command in the editor toolbar</li>
+<li>The Add Chunk <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAABHNCSVQICAgIfAhkiAAAAtlJREFUOI3NlE1oVFcUx3/3vvfm4zkTExs1MzpC7UMDCY0yRJCCIhTFjR9IlUIVsxCl7aoLQbe6sosuBAUXblwJEjUtBZFIqeDHmwQ/FllEi/GjcaHVmOR9zbx3r4t5qQZGdOmBA/fec/if87/n/q8ADMACbCAPCJqmgRDwgAag0rOPmg2UarXagOd515RSs0qpWc/zhl3X3Q+U0hzjU8AAlrquuz9Jktdaa718sKSXXezSWmudJMnrWq02QI4Kq+jkG4pspDDPv5tfyASyPT09e6WU7QAKjUxZSynbi0uKh60Ncm+uaCsskSDn0w4CL463qUGGOEt6XxWl1NiKy8sLAAiN1hqBAAHjW/9Rx/88pm07b+QKeQzrXUMCaMRxMnj1wv2bI+5v/M45c24IGpUuBAKZ7iVCCvkyfEHkR2SjLEbmfUCBbdnG19U1vbdG3K2aJqAVBEHt2Y7nmwAql8oI4OmO5wDcn7yHF/kYlqSvs4+dvbsoFUuEccjpkVM8nH6ANIUFFAEkkBkbGzunlJqaq6xQAMz4M43h8WGSeky5UOaHvn38MT7Ej1cOETYCCtYCtJ7/kkyg0d/ff3t0dPSX7u7ufU+2/7sOwPf92z+f/GlR1BH1GZZk48pNPJ6a4M7LOwAc/ftIyydjAtPAF9Vq9S5wAwjSWF6s58yegd1k7AwL7TakIVuCvG8SmAX+A2aAHNCVeo4MSa4th5W3eNN4Q8/SXtZ2rgVg84otlO1yyw4jmrKK0m7NNBaTI8rYGaQpGXp0mdWLV3OgehCA64+vM+lPtgRMUsA4pTvHS2GRGJbxv7p/rZ34JMrQFH0M1Gl+CKHjOAKBF4RB/WMgYRDWpSZwHCf7QcHn29tXqkzjq6lwqmtZpdxmmmbLXN/z6zf+ujkRPqq7xrT9ULRKAnAcJzsLba++fPK9MuNvNXQghERhIlAIrdAoAa+MhnW1Y6JyvtCcwWdubwGL+xhGxg9Y9wAAAABJRU5ErkJggg==" /> command in the editor toolbar</li>
 <li>The chunk delimiters <code>```{r}</code> and <code>```</code></li>
 </ul>
+<div id="chunk-options" class="section level2">
+<h2><span class="header-section-number">2.1</span> Chunk options</h2>
+<p>Chunk output can be customized with knitr options, arguments set in the <code>{}</code> of a chunk header.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAxXG54XG5gYGAifQ== -->
@@ -208,9 +215,49 @@ x</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAzXG54XG5gYGAifQ== -->
+<pre class="r"><code>x &lt;- 3
+x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcbiJ9 -->
+<pre><code>[1] 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueTwtNFxueVxuYGBgIn0= -->
+<pre class="r"><code>y&lt;-4
+y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
+<pre><code>[1] 4</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSA1XG54XG5gYGAifQ== -->
+<pre class="r"><code>x &lt;- 5
+x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDVcbiJ9 -->
+<pre><code>[1] 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueTwtIDZcbnlcbmBgYCJ9 -->
+<pre class="r"><code>y&lt;- 6
+y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDZcbiJ9 -->
+<pre><code>[1] 6</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2tzIg0Kb3V0cHV0OiANCiAgaHRtbF9ub3RlYm9vazogDQogICAgbnVtYmVyX3NlY3Rpb25zOiB5ZXMNCiAgICB0aGVtZTogc2FuZHN0b25lDQogICAgdG9jOiB5ZXMNCmVkaXRvcl9vcHRpb25zOiANCiAgY2h1bmtfb3V0cHV0X3R5cGU6IGlubGluZQ0KLS0tDQoNCiMgSG93IGl0IHdvcmtzDQpBIG5vdGVib29rIGlzIGFuIGludGVyYWN0aXZlIFIgTWFya2Rvd24gZmlsZS4gVGhlIGZpbGUgY29udGFpbnMgdGhyZWUgdHlwZXMgb2YgY29udGVudHM6DQoNCiogQW4gb3B0aW9uYWwgWUFNTCBoZWFkZXIgc3Vycm91bmRlZCBieSBgLS0tYA0KKiBSIGNvZGUgY2h1bmtzIHN1cnJvdW5kZWQgYnkgYCBgYGAgYA0KKiBUZXh0IG1peGVkIHdpdGggc2ltcGxlIHRleHQgZm9ybWF0dGluZw0KDQojIENvZGUgY2h1bmtzDQpZb3UgY2FuIGluc2VydCBjb2RlIGNodW5rcyBpbnRvIHlvdXIgZmlsZSB3aXRoOw0KDQoqIFRoZSBrZXlib2FyZCBzaG9ydGN1dCAqKkN0cmwgKyBBbHQgKyBJKioNCiogVGhlIEFkZCBDaHVuayBjb21tYW5kIGluIHRoZSBlZGl0b3IgdG9vbGJhcg0KKiBUaGUgY2h1bmsgZGVsaW1pdGVycyBgIGBgYHtyfSBgIGFuZCBgIGBgYCBgDQoNCg0KDQpgYGB7cn0NCnggPC0gMQ0KeA0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2tzIg0Kb3V0cHV0Og0KICBodG1sX25vdGVib29rOg0KICAgIG51bWJlcl9zZWN0aW9uczogeWVzDQogICAgdGhlbWU6IHNhbmRzdG9uZQ0KICAgIHRvYzogeWVzDQplZGl0b3Jfb3B0aW9uczoNCiAgY2h1bmtfb3V0cHV0X3R5cGU6IGlubGluZQ0KLS0tDQoNCmBgYHtyIGdsb2JhbF9vcHRpb25zLCBpbmNsdWRlPUZBTFNFfQ0KIyBrbml0cjo6b3B0c19jaHVuayRzZXQodGlkeT1UUlVFLCByZXN1bHRzPSdob2xkJywgZmlnLmFsaWduPSdjZW50ZXInKQ0KYGBgDQoNCiMgSG93IGl0IHdvcmtzDQpBIG5vdGVib29rIGlzIGFuIGludGVyYWN0aXZlIFIgTWFya2Rvd24gZmlsZS4gVGhlIGZpbGUgY29udGFpbnMgdGhyZWUgdHlwZXMgb2YgY29udGVudHM6DQoNCiogQW4gb3B0aW9uYWwgWUFNTCBoZWFkZXIgc3Vycm91bmRlZCBieSBgLS0tYA0KKiBSIGNvZGUgY2h1bmtzIHN1cnJvdW5kZWQgYnkgYCBgYGAgYA0KKiBUZXh0IG1peGVkIHdpdGggc2ltcGxlIHRleHQgZm9ybWF0dGluZw0KDQojIENvZGUgY2h1bmtzDQpZb3UgY2FuIGluc2VydCBjb2RlIGNodW5rcyBpbnRvIHlvdXIgZmlsZSB3aXRoOw0KDQoqIFRoZSBrZXlib2FyZCBzaG9ydGN1dCAqKkN0cmwgKyBBbHQgKyBJKioNCiogVGhlIEFkZCBDaHVuayAhW10oSW1hZ2VzL25vdGVib29rLWluc2VydC1jaHVuay5wbmcpIGNvbW1hbmQgaW4gdGhlIGVkaXRvciB0b29sYmFyDQoqIFRoZSBjaHVuayBkZWxpbWl0ZXJzIGAgYGBge3J9IGAgYW5kIGAgYGBgIGANCg0KIyMgQ2h1bmsgb3B0aW9ucw0KQ2h1bmsgb3V0cHV0IGNhbiBiZSBjdXN0b21pemVkIHdpdGgga25pdHIgb3B0aW9ucywgYXJndW1lbnRzIHNldCBpbiB0aGUgYHt9YCBvZiBhIGNodW5rIGhlYWRlci4NCg0KDQoNCmBgYHtyfQ0KeCA8LSAxDQp4DQpgYGANCg0KYGBge3IsIGVjaG89RkFMU0V9DQp4IDwtIDINCngNCmBgYA0KYGBge3IsIGNvbGxhcHNlPVRSVUV9DQp4IDwtIDMNCngNCnk8LTQNCnkNCmBgYA0KDQpgYGB7ciwgY29sbGFwc2U9RkFMU0UsIHJlc3VsdHM9J2hvbGQnfQ0KeCA8LSA1DQp4DQp5PC0gNg0KeQ0KYGBg</div>
 
 
 
