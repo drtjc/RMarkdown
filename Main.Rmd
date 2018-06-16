@@ -28,13 +28,13 @@ A notebook is an interactive R Markdown file. The file contains three types of c
 * Text mixed with simple text formatting
 
 
-```{r, child = "YAML.Rmd"}
+```{r child_YAML, child = "YAML.Rmd"}
 ```
 
-```{r, child = "Code_chunks.Rmd"}
+```{r child_Code_chunks, child = "Code_chunks.Rmd", cache=FALSE, eval=FALSE}
 ```
 
-```{r, child = "Text_formatting.Rmd"}
+```{r child_Text_formatting, child = "Text_formatting.Rmd"}
 ```
 
 
