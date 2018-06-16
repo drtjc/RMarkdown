@@ -1,5 +1,5 @@
 ---
-title: "Code Chunks"
+title: "Code chunks"
 output:
   html_document:
     number_sections: yes
