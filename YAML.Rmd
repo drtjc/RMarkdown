@@ -7,28 +7,13 @@ output:
     toc: yes
     toc_depth: 3
     toc_float: yes
-    css: styles.css
 ---
 
 # YAML header
-this is child document for YAML
-
-## test me {.tabset .tabset-fade .tabset-pills}
-blah
-
-### sub 1
-asasfaf
-
-### sub2
-ASasasS
-
-## Make it blue {#nextsteps}
-sdfasdfasdfa
-gadgdfgd 
+The YAML header contains document metadata.
 
 
 
-## stop blue {}
-dfgsdfgdsfg
+
 
 

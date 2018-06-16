@@ -1,0 +1,67 @@
+---
+title: "Code Chunks"
+output:
+  html_document:
+    number_sections: yes
+    theme: sandstone
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+---
+
+# Code chunks
+You can insert code chunks into your file with;
+
+* The keyboard shortcut **Ctrl + Alt + I**
+* The Add Chunk ![](Images/notebook-insert-chunk.png) command in the editor toolbar
+* The chunk delimiters ` ```{r} ` and ` ``` `
+
+## Chunk options
+Chunk output can be customized with knitr options, arguments set in the `{}` of a chunk header.
+
+### Text results
+
+* `echo`: (`TRUE`, logical or numeric) whether to include R source code in the output file. Besides `TRUE` or `FALSE`, we can use a numeric vector to select which expressions to echo in a chunk - e.g. `echo = 2:3` means only echo 2nd and 3rd expressions; `echo = -4` means to exclude the 4th expression.
+    ```
+    x <- 1
+    x
+    ```
+    
+    `echo=TRUE`
+    ```{r, echo=TRUE}
+    x <- 1
+    x
+    ```
+    
+    `echo=FALSE`
+    ```{r, echo=FALSE}
+    x <- 1
+    x
+    ```
+
+    
+    ```{r, echo=-c(1,3)}
+    x <- 1
+    y <- 2
+    x
+    y
+    ```
+
+
+
+
+```{r, collapse=TRUE}
+x <- 3
+x
+y<-4
+y
+```
+
+```{r, collapse=FALSE, results='hold'}
+x <- 5
+x
+y<- 6
+y
+```
+
+
