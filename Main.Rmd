@@ -7,7 +7,6 @@ output:
     toc: yes
     toc_depth: 3
     toc_float: yes
-      collapsed: false
   html_notebook:
     number_sections: yes
     theme: sandstone
@@ -27,7 +26,7 @@ A notebook is an interactive R Markdown file. The file contains three types of c
 * Text mixed with simple text formatting
 
 
-```{r, child = "YAML.Rmd", eval=FALSE}
+```{r, child = "YAML.Rmd"}
 ```
 
 # Code chunks

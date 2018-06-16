@@ -3,14 +3,17 @@ title: "YAML"
 output:
   html_document:
     number_sections: yes
-    theme: journal
+    theme: sandstone
     toc: yes
+    toc_depth: 3
+    toc_float: yes
+    css: styles.css
 ---
 
 # YAML header
 this is child document for YAML
 
-## test me {.tabset}
+## test me {.tabset .tabset-fade .tabset-pills}
 blah
 
 ### sub 1
@@ -18,3 +21,11 @@ asasfaf
 
 ### sub2
 ASasasS
+
+## Make it blue {#nextsteps}
+sdfasdfasdfa
+gadgdfgd
+
+dfgsdfgdsfg
+
+
