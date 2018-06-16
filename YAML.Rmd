@@ -1,0 +1,20 @@
+---
+title: "YAML"
+output:
+  html_document:
+    number_sections: yes
+    theme: journal
+    toc: yes
+---
+
+# YAML header
+this is child document for YAML
+
+## test me {.tabset}
+blah
+
+### sub 1
+asasfaf
+
+### sub2
+ASasasS

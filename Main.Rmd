@@ -3,7 +3,11 @@ title: "R Notebooks"
 output:
   html_document:
     number_sections: yes
+    theme: sandstone
     toc: yes
+    toc_depth: 3
+    toc_float: yes
+      collapsed: false
   html_notebook:
     number_sections: yes
     theme: sandstone
@@ -22,8 +26,9 @@ A notebook is an interactive R Markdown file. The file contains three types of c
 * R code chunks surrounded by ` ``` `
 * Text mixed with simple text formatting
 
-# YAML headers
 
+```{r, child = "YAML.Rmd", eval=FALSE}
+```
 
 # Code chunks
 You can insert code chunks into your file with;
